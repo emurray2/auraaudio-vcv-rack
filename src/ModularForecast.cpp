@@ -135,7 +135,7 @@ struct ModularForecastDisplay : OpenGlWidget {
 
             /*mouseX/Y is set to the mouse location in x and y and used here, it is then reversed to mouseX\Y = (-1, -1)
                 for no interference, this is used when the LMB is pressed and the particle stops at the cursor instead of keep going*/
-            if (Particles[i].XCoor + 1 >= mouseX & Particles[i].XCoor - 1 <= mouseX & Particles[i].YCoor + 1 >= mouseY & Particles[i].YCoor - 1 <= mouseY)
+            if ((Particles[i].XCoor + 1 >= mouseX) & (Particles[i].XCoor - 1 <= mouseX) & (Particles[i].YCoor + 1 >= mouseY) & (Particles[i].YCoor - 1 <= mouseY))
             {
                 Particles[i].dX = 0;
                 Particles[i].dY = 0;

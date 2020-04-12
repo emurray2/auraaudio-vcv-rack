@@ -236,13 +236,11 @@ struct ModularForecastWidget : ModuleWidget {
         addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
         addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
         addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
-        std::cout << "Creating ports" << std::endl;
         addInput(createInput<PJ301MPort>(Vec(18, 55), module, ModularForecast::CH_INPUTS + 0));
         //addInput(createInput<PJ301MPort>(Vec(18, 115), module, ModularForecast::CH_INPUTS + 1));
         //addInput(createInput<PJ301MPort>(Vec(18, 175), module, ModularForecast::CH_INPUTS + 2));
         //addInput(createInput<PJ301MPort>(Vec(18, 235), module, ModularForecast::CH_INPUTS + 3));
         addOutput(createOutput<PJ301MPort>(Vec(18, 300), module, ModularForecast::MIX_OUTPUT));
-        std::cout << "Ports Created" << std::endl;
         
         {
             ModularForecastDisplay *display = new ModularForecastDisplay();

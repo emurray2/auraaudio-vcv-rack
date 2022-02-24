@@ -2,7 +2,7 @@
   "slug": "AuraAudio",
   "name": "Aura Audio",
   "version": "2.0.0",
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "brand": "Aura Audio",
   "author": "Evan Murray",
   "authorEmail": "evanmurray22@gmail.com",

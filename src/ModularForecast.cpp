@@ -117,7 +117,7 @@ struct ModularForecastDisplay : OpenGlWidget {
         int i;
         glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(0.15f, 0.15f, 0.3f, 0.0f);
-        glRasterPos2f(fbSize.x - 0.892 * (fbSize.x), fbSize.y - 0.008 * (fbSize.y));
+        glRasterPos2f(getFramebufferSize().x - 0.892 * (getFramebufferSize().x), getFramebufferSize().y - 0.008 * (getFramebufferSize().y));
         for (i = 0; i < currentParticles; i++)
         {
 
@@ -200,7 +200,7 @@ struct ModularForecastDisplay : OpenGlWidget {
             //Particle Color
             glColor3f(1.0, 1.0, 1.0);
             glVertex2f(Particles[i].XCoor, Particles[i].YCoor);
-            glRasterPos2f(0.667 * (fbSize.x), 0.667 * (fbSize.y));
+            glRasterPos2f(0.667 * (getFramebufferSize().x), 0.667 * (getFramebufferSize().y));
             glEnd();
             glColor3f(0.8, 1.0, 0.8);
         }
@@ -208,7 +208,7 @@ struct ModularForecastDisplay : OpenGlWidget {
     
     void drawFramebuffer() override
     {
-        glViewport(0.0, 0.0, fbSize.x, fbSize.y);
+        glViewport(0.0, 0.0, getFramebufferSize().x, getFramebufferSize().y);
         glClearColor(0.0, 0.0, 0.0, 1.0);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
